@@ -43,4 +43,11 @@ public class DefaultPersonService implements PersonService {
     log.info("Raderar person med id: {}", id);
     repository.deleteById(id);
   }
+
+  @Override
+  public List<Person> findAllPersonsWithAgeBetween(int minAge, int maxAge) {
+    List<Person> allByAgeInterval = repository.findAllByAgeInterval(minAge, maxAge);
+    log.info("Hittat {} personer.", allByAgeInterval.size());
+    return allByAgeInterval;
+  }
 }

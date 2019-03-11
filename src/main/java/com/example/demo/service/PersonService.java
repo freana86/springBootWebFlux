@@ -8,4 +8,7 @@ public interface PersonService {
   Person getPerson(Integer id);
   List<Person> findAllPersons();
   void deletePerson(Integer id);
+
+  // Special
+  List<Person> findAllPersonsWithAgeBetween(int minAge, int maxAge);
 }

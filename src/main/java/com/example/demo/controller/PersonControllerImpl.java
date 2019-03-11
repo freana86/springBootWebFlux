@@ -38,4 +38,10 @@ public class PersonControllerImpl implements PersonController {
   public void deletePerson(@PathVariable Integer id) {
     personService.deletePerson(id);
   }
+
+  @Override
+  @GetMapping("/person/age_interval")
+  public List<Person> findAllPersonsWithAgeBetween(@RequestParam int minAge, @RequestParam int maxAge) {
+    return personService.findAllPersonsWithAgeBetween(minAge, maxAge);
+  }
 }

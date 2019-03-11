@@ -9,4 +9,6 @@ public interface PersonController {
   Person getPerson(Integer id);
   List<Person> findAllPersons();
   void deletePerson(Integer id);
+
+  List<Person> findAllPersonsWithAgeBetween(int minAge, int maxAge);
 }
