@@ -1,0 +1,4 @@
+
+## Url till den andra tjänsten.. (finns inte än)
+dataapplication:
+  url: http://localhost:8081/api/persons
