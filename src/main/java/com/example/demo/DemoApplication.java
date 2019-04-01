@@ -9,12 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Log4j2
 @SpringBootApplication
+@EnableScheduling
 public class DemoApplication implements CommandLineRunner {
 
   @Autowired
@@ -26,13 +29,13 @@ public class DemoApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    initDemoData();
+   // initDemoData();
   }
 
   // Lägger in lite demodata i databasen...
   private void initDemoData() {
     List<Person> personList = new ArrayList<>();
-    for(int i = 0; i < 100; i++) {
+    for(int i = 0; i < 3; i++) {
       Person person = new Person(
               RandomStringUtils.randomAlphabetic(5),
               RandomStringUtils.randomAlphabetic(5),

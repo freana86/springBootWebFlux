@@ -25,7 +25,7 @@ public class DataApplicationClientImpl implements DataApplicationClient {
   @Autowired
   private WebClient.Builder webclientBuilder;
 
-  @Value("{$dataapplication.url}") // kolla application.yml filen .. där hämtas denna url..
+  @Value("${dataapplication.url}") // kolla application.yml filen .. där hämtas denna url..
   private String url;
 
   @Override
